@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matricula</title>
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/matricula.css" />
+  </head>
+
+  <!-- ======================================
+       PÁGINA: MATRÍCULA
+       Descripción: gestión de matrículas registradas
+       ====================================== -->
+  <body class="matricula">
+    <!-- SIDEBAR / MENÚ LATERAL -->
+    <header class="matricula-header">
+      <h1>Sistema de Gestión de Recursos</h1>
+      <nav class="matricula-nav">
+        <ul class="matricula-menu">
+          <li><a href="DASHBOARD.html"> Inicio</a></li>
+          <li><a href="CURSOS.html">Cursos</a></li>
+          <li><a href="ESTUDIANTES.html">Estudiantes</a></li>
+          <li><a href="MATRICULA.html">Matricula</a></li>
+        </ul>
+      </nav>
+
+      <footer class="matricula-footer-sydebar">
+        <p>Alvaro Vera</p>
+        <p>alvera@cesde.net</p>
+      </footer>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="matricula-main">
+      <!-- BARRA SUPERIOR -->
+      <header class="matricula-topbar">
+        <h2>Sistema de Gestión de Cursos</h2>
+      </header>
+
+      <!-- SECCIÓN DE CONTENIDO DE MATRÍCULA -->
+      <section class="matricula-content">
+        <!-- ENCABEZADO DE LA PÁGINA -->
+        <header class="matricula-content-header">
+          <hgroup>
+            <h1>Matrículas</h1>
+            <p>Gestión de matrículas registradas</p>
+          </hgroup>
+          <!-- AQUÍ VA EL BOTÓN NUEVO DE MATRÍCULA -->
+          <button class="btn-nuevo">Nuevo Matrícula</button>
+        </header>
+
+        <!-- AQUÍ VA EL FILTRO POR ESTADO -->
+        <select class="filtro-estado">
+          <option value="todos">Todos los estados</option>
+          <option value="activa">Activa</option>
+          <option value="completada">Completada</option>
+          <option value="cancelada">Cancelada</option>
+        </select>
+
+        <!-- AQUÍ VA EL BUSCADOR -->
+        <input
+          type="text"
+          class="buscar-matricula"
+          placeholder="Buscar estudiante o curso..."
+        />
+
+        <!-- AQUÍ IRÁ LA TABLA DE MATRÍCULAS -->
+        <!-- TABLA DE MATRÍCULAS: columnas = estudiante, curso, fecha, estado y acciones -->
+        <table class="tabla-matricula">
+          <thead>
+            <tr>
+              <th>Estudiante</th>
+              <th>Curso</th>
+              <th>Fecha</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Alvaro Vera</td>
+              <td>React Desde Cero</td>
+              <td>2026-07-30</td>
+              <td>ACTIVA</td>
+              <td class="acciones">
+                <a href="#" class="accion-editar">Editar</a>
+                <a href="#" class="accion-eliminar">Eliminar</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Yeraldin Natasha</td>
+              <td>Spring Boot</td>
+              <td>2026-07-30</td>
+              <td>CANCELADA</td>
+              <td class="acciones">
+                <a href="#" class="accion-editar">Editar</a>
+                <a href="#" class="accion-eliminar">Eliminar</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Luis Goenaga</td>
+              <td>Spring Boot</td>
+              <td>2026-07-30</td>
+              <td>COMPLETADA</td>
+              <td class="acciones">
+                <a href="#" class="accion-editar">Editar</a>
+                <a href="#" class="accion-eliminar">Eliminar</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Maria Perez</td>
+              <td>React Desde Cero</td>
+              <td>2026-07-29</td>
+              <td>ACTIVA</td>
+              <td class="acciones">
+                <a href="#" class="accion-editar">Editar</a>
+                <a href="#" class="accion-eliminar">Eliminar</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <footer class="matricula-footer-main">
+        <p>©2026 Sistema de Gestión de Cursos</p>
+      </footer>
+    </main>
+  </body>
+</html>

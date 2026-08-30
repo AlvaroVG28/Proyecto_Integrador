@@ -1,0 +1,30 @@
+/* ====================================
+   ESTILOS ESPECÍFICOS - CURSOS
+   ==================================== */
+
+.courses-content {
+  padding: 30px;
+  flex: 1;
+}
+
+.courses-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.courses-content-header h1 {
+  font-size: 24px;
+  color: var(--color-text-light);
+  margin-bottom: 10px;
+}
+
+.courses-content-header p {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.buscar-curso {
+  width: 100%;
+}

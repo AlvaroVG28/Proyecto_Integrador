@@ -1,0 +1,274 @@
+/* ====================================
+   PALETA DE COLORES CENTRALIZADA
+   ==================================== */
+
+:root {
+  /* COLORES PRINCIPALES */
+  --color-primary-dark: #1b4332;
+  --color-primary-medium: #2d6a4f;
+  --color-primary-light: #95d5b2;
+
+  /* COLORES SECUNDARIOS */
+  --color-button-main: #40916c;
+  --color-button-hover: #2d6a4f;
+
+  /* COLORES DE TARJETAS */
+  --color-card-1: #1b4332;
+  --color-card-2: #2d6a4f;
+  --color-card-3: #40916c;
+  --color-card-4: #52b788;
+  --color-card-5: #74c69d;
+  --color-card-6: #95d5b2;
+  --color-card-6-text: #1b4332;
+
+  /* COLORES DE TEXTO */
+  --color-text-white: #ffffff;
+  --color-text-light: #f4f3f3;
+  --color-text-dark: #111111;
+  --color-text-gray: #6b7280;
+  --color-text-muted: #95d5b2;
+
+  /* COLORES DE ACCIONES */
+  --color-edit: #2563eb;
+  --color-delete: #dc2626;
+
+  /* COLORES DE FONDO */
+  --color-bg-white: #c9d1d7;
+  --color-bg-light: #bcc4ca;
+  --color-bg-topbar: #c9d1d7;
+  --color-bg-footer: #95d5b2;
+
+  /* COLORES DE BORDES */
+  --color-border-light: #e2e4ec;
+  --color-border-dark: #1b4332;
+  --color-border-table: #eef0f5;
+
+  /* COLORES DE FOCO */
+  --color-focus-border: #40916c;
+  --color-focus-shadow: rgba(64, 145, 108, 0.1);
+}
+
+/* ====================================
+   ESTILOS COMPARTIDOS - TODAS LAS PÁGINAS
+   ==================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* LAYOUT PRINCIPAL */
+.dashboard,
+.courses,
+.estudiantes,
+.matricula {
+  display: flex;
+}
+
+/* HEADER/SIDEBAR COMPARTIDO */
+.dashboard-header,
+.courses-header,
+.estudiantes-header,
+.matricula-header {
+  width: 250px;
+  background-color: var(--color-primary-dark);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-header h1,
+.courses-header h1,
+.estudiantes-header h1,
+.matricula-header h1 {
+  color: rgb(252, 251, 255);
+  padding: 20px 20px 0 20px;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+/* NAVEGACIÓN COMPARTIDA */
+.dashboard-nav,
+.courses-nav,
+.estudiantes-nav,
+.matricula-nav {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.dashboard-nav a,
+.courses-nav a,
+.estudiantes-nav a,
+.matricula-nav a {
+  color: var(--color-text-white);
+  text-decoration: none;
+}
+
+.dashboard-nav ul,
+.courses-nav ul,
+.estudiantes-nav ul,
+.matricula-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  list-style: none;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+/* FOOTER SIDEBAR */
+.dashboard-footer-sydebar,
+.courses-footer-sydebar,
+.estudiantes-footer-sydebar,
+.matricula-footer-sydebar {
+  color: rgb(184, 183, 194);
+  margin-top: auto;
+  padding: 20px;
+}
+
+/* MAIN CONTENT */
+.dashboard-main,
+.courses-main,
+.estudiantes-main,
+.matricula-main {
+  flex: 1;
+  background-color: var(--color-primary-medium);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOPBAR */
+.dashboard-topbar,
+.courses-topbar,
+.estudiantes-topbar,
+.matricula-topbar {
+  background-color: var(--color-bg-topbar);
+  padding: 20px 30px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.dashboard-topbar h2,
+.courses-topbar h2,
+.estudiantes-topbar h2,
+.matricula-topbar h2 {
+  font-size: 18px;
+  color: var(--color-text-dark);
+}
+
+/* FOOTER MAIN */
+.dashboard-footer-main,
+.courses-footer-main,
+.estudiantes-footer-main,
+.matricula-footer-main {
+  padding: 15px;
+  color: var(--color-primary-dark);
+  font-size: 13px;
+  text-align: center;
+  background-color: var(--color-bg-footer);
+  border-top: 1px solid var(--color-border-dark);
+  margin-top: auto;
+}
+
+/* BOTONES COMPARTIDOS */
+.btn-nuevo {
+  background-color: var(--color-button-main);
+  color: var(--color-text-white);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-nuevo:hover {
+  background-color: var(--color-button-hover);
+  transition: background-color 0.3s ease;
+}
+
+/* INPUTS COMPARTIDOS */
+.buscar-curso,
+.buscar-estudiante,
+.buscar-matricula,
+.filtro-estado {
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  background-color: var(--color-bg-white);
+}
+
+.buscar-curso:focus,
+.buscar-estudiante:focus,
+.buscar-matricula:focus,
+.filtro-estado:focus {
+  outline: none;
+  border-color: var(--color-focus-border);
+  box-shadow: 0 0 0 3px var(--color-focus-shadow);
+}
+
+/* TABLAS COMPARTIDAS */
+.tabla-courses,
+.tabla-estudiantes,
+.tabla-matricula {
+  width: 100%;
+  background-color: var(--color-bg-white);
+  border-radius: 8px;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+.tabla-courses th,
+.tabla-estudiantes th,
+.tabla-matricula th {
+  text-align: left;
+  padding: 16px 20px;
+  background-color: var(--color-bg-white);
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tabla-courses td,
+.tabla-estudiantes td,
+.tabla-matricula td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border-table);
+  font-size: 14px;
+  color: var(--color-text-dark);
+}
+
+.tabla-courses tr:last-child td,
+.tabla-estudiantes tr:last-child td,
+.tabla-matricula tr:last-child td {
+  border-bottom: none;
+}
+
+/* ACCIONES EN TABLAS */
+.acciones a {
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 12px;
+}
+
+.accion-editar {
+  color: var(--color-edit);
+}
+
+.accion-editar:hover {
+  text-decoration: underline;
+}
+
+.accion-eliminar {
+  color: var(--color-delete);
+}
+
+.accion-eliminar:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,36 @@
+/* ====================================
+   ESTILOS ESPECÍFICOS - MATRÍCULA
+   ==================================== */
+
+.matricula-content {
+  padding: 30px;
+  flex: 1;
+}
+
+.matricula-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.matricula-content-header h1 {
+  font-size: 24px;
+  color: var(--color-text-light);
+  margin-bottom: 10px;
+}
+
+.matricula-content-header p {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.buscar-matricula {
+  width: 100%;
+}
+
+.filtro-estado {
+  padding: 10px 14px;
+  background-color: var(--color-bg-white);
+  cursor: pointer;
+}

@@ -1,0 +1,118 @@
+/* ====================================
+   ESTILOS ESPECÍFICOS - DASHBOARD
+   ==================================== */
+
+.dashboard-content {
+  padding: 30px;
+}
+
+.dashboard-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.dashboard-content-header h1 {
+  font-size: 24px;
+  color: var(--color-text-light);
+  margin-bottom: 10px;
+}
+
+.dashboard-content-header p {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+/* GRID DE TARJETAS */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 15px;
+}
+
+.card {
+  background-color: var(--color-bg-white);
+  color: var(--color-text-dark);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin-left: 20px;
+  margin-right: 20px;
+  flex: 1;
+}
+
+.card p {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* COLORES DE TARJETAS */
+h2.color1 {
+  display: inline-block;
+  background-color: var(--color-card-1);
+  color: var(--color-text-white);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+h2.color2 {
+  display: inline-block;
+  background-color: var(--color-card-2);
+  color: var(--color-text-white);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+h2.color3 {
+  display: inline-block;
+  background-color: var(--color-card-3);
+  color: var(--color-text-white);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+h2.color4 {
+  display: inline-block;
+  background-color: var(--color-card-4);
+  color: var(--color-text-white);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+h2.color5 {
+  display: inline-block;
+  background-color: var(--color-card-5);
+  color: var(--color-text-white);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+h2.color6 {
+  display: inline-block;
+  background-color: var(--color-card-6);
+  color: var(--color-card-6-text);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .dashboard-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COURSES</title>
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/cursos.css" />
+  </head>
+
+  <!-- ======================================
+       PÁGINA: CURSOS
+       Descripción: gestión de cursos registrados
+       ====================================== -->
+  <body class="courses">
+    <!-- SIDEBAR / MENÚ LATERAL -->
+    <header class="courses-header">
+      <h1>Sistema de Gestión de Recursos</h1>
+      <nav class="courses-nav">
+        <ul class="courses-menu">
+          <li><a href="DASHBOARD.html">Inicio</a></li>
+          <li><a href="CURSOS.html">Cursos</a></li>
+          <li><a href="ESTUDIANTES.html">Estudiantes</a></li>
+          <li><a href="MATRICULA.html">Matricula</a></li>
+        </ul>
+      </nav>
+
+      <footer class="courses-footer-sydebar">
+        <p>Alvaro Vera</p>
+        <p>alvera@cesde.net</p>
+      </footer>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="courses-main">
+      <!-- BARRA SUPERIOR -->
+      <header class="courses-topbar">
+        <h2>Sistema de Gestión de Cursos</h2>
+      </header>
+
+      <!-- SECCIÓN DE CONTENIDO DE CURSOS -->
+      <section class="courses-content">
+        <!-- ENCABEZADO DE LA PÁGINA -->
+        <header class="courses-content-header">
+          <hgroup>
+            <h1>Cursos</h1>
+            <p>Gestión de cursos registrados</p>
+          </hgroup>
+          <!-- AQUÍ VA EL BOTÓN NUEVO CURSO -->
+          <button class="btn-nuevo">Nuevo Curso</button>
+        </header>
+
+        <!-- AQUÍ VA EL BUSCADOR DE CURSOS -->
+        <input type="text" class="buscar-curso" placeholder="Buscar curso..." />
+
+        <!-- AQUÍ IRÁ LA TABLA DE CURSOS -->
+        <!-- TABLA DE CURSOS: columnas = código, nombre del curso, capacidad y acciones -->
+        <table class="tabla-courses">
+          <thead>
+            <tr>
+              <th>Codigo</th>
+              <th>Curso</th>
+              <th>Capacidad</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>REACT01</td>
+              <td>React Desde Cero</td>
+              <td>30</td>
+              <td class="acciones">
+                <a href="#" class="accion-editar">Editar</a>
+                <a href="#" class="accion-eliminar">Eliminar</a>
+              </td>
+            </tr>
+            <tr>
+              <td>SPRING01</td>
+              <td>Spring Boot</td>
+              <td>26</td>
+              <td class="acciones">
+                <a href="#" class="accion-editar">Editar</a>
+                <a href="#" class="accion-eliminar">Eliminar</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <footer class="courses-footer-main">
+        <p>©2026 Sistema de Gestión de Cursos</p>
+      </footer>
+    </main>
+  </body>
+</html>

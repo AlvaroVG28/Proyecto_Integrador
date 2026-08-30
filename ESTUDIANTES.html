@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESTUDIANTES</title>
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/estudiantes.css" />
+  </head>
+
+  <!-- ======================================
+       PÁGINA: ESTUDIANTES
+       Descripción: gestión de estudiantes registrados
+       ====================================== -->
+  <body class="estudiantes">
+    <!-- SIDEBAR / MENÚ LATERAL -->
+    <header class="estudiantes-header">
+      <h1>Sistema de Gestión de Recursos</h1>
+      <nav class="estudiantes-nav">
+        <ul class="estudiantes-menu">
+          <li><a href="DASHBOARD.html"> Inicio</a></li>
+          <li><a href="CURSOS.html">Cursos</a></li>
+          <li><a href="ESTUDIANTES.html">Estudiantes</a></li>
+          <li><a href="MATRICULA.html">Matricula</a></li>
+        </ul>
+      </nav>
+
+      <footer class="estudiantes-footer-sydebar">
+        <p>Alvaro Vera</p>
+        <p>alvera@cesde.net</p>
+      </footer>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="estudiantes-main">
+      <!-- BARRA SUPERIOR -->
+      <header class="estudiantes-topbar">
+        <h2>Sistema de Gestión de Cursos</h2>
+      </header>
+
+      <!-- SECCIÓN DE CONTENIDO DE ESTUDIANTES -->
+      <section class="estudiantes-content">
+        <!-- ENCABEZADO DE LA PÁGINA -->
+        <header class="estudiantes-content-header">
+          <hgroup>
+            <h1>Estudiantes</h1>
+            <p>Gestión de estudiantes registrados</p>
+          </hgroup>
+          <!-- AQUÍ VA EL BOTÓN NUEVO ESTUDIANTE -->
+          <button class="btn-nuevo">Nuevo Estudiante</button>
+        </header>
+
+        <!-- AQUÍ VA EL BUSCADOR DE ESTUDIANTES -->
+        <input
+          type="text"
+          class="buscar-estudiante"
+          placeholder="Buscar estudiante..."
+        />
+
+        <!-- AQUÍ IRÁ LA TABLA DE ESTUDIANTES -->
+        <!-- TABLA DE ESTUDIANTES: columnas = nombre, apellido, correo, celular y acciones -->
+        <table class="tabla-estudiantes">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Correo</th>
+              <th>Celular</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Yeraldin Natasha</td>
+              <td>Echeverry</td>
+              <td>yeraldin@correo.com</td>
+              <td>3118022525</td>
+              <td class="acciones">
+                <a href="#" class="accion-editar">Editar</a>
+                <a href="#" class="accion-eliminar">Eliminar</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Luis</td>
+              <td>Goenaga</td>
+              <td>luis@correo.com</td>
+              <td>3158800287</td>
+              <td class="acciones">
+                <a href="#" class="accion-editar">Editar</a>
+                <a href="#" class="accion-eliminar">Eliminar</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Maria</td>
+              <td>Perez</td>
+              <td>maria@correo.com</td>
+              <td>3125600659</td>
+              <td class="acciones">
+                <a href="#" class="accion-editar">Editar</a>
+                <a href="#" class="accion-eliminar">Eliminar</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <footer class="estudiantes-footer-main">
+        <p>©2026 Sistema de Gestión de Cursos</p>
+      </footer>
+    </main>
+  </body>
+</html>
