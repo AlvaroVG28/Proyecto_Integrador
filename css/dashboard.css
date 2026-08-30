@@ -28,80 +28,93 @@
 .dashboard-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 15px;
+  gap: 22px;
+  padding: 18px 16px 12px;
 }
 
 .card {
-  background-color: var(--color-bg-white);
+  background: linear-gradient(
+    180deg,
+    rgba(244, 246, 241, 0.98),
+    rgba(226, 234, 228, 0.96)
+  );
   color: var(--color-text-dark);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 22px 20px 18px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(17, 17, 17, 0.08);
   margin-left: 20px;
   margin-right: 20px;
   flex: 1;
+  border: 1px solid rgba(27, 67, 50, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(27, 67, 50, 0.12);
 }
 
 .card p {
-  font-size: 22px;
-  font-weight: bold;
-  margin-top: 8px;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-top: 12px;
+  line-height: 1.2;
 }
 
 /* COLORES DE TARJETAS */
 h2.color1 {
   display: inline-block;
   background-color: var(--color-card-1);
-  color: var(--color-text-white);
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-size: 20px;
+  color: var(--color-card-text-light);
+  border-radius: 10px;
+  padding: 7px 12px;
+  font-size: 1.15rem;
+  letter-spacing: 0.2px;
 }
 
 h2.color2 {
   display: inline-block;
   background-color: var(--color-card-2);
-  color: var(--color-text-white);
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-size: 20px;
+  color: var(--color-card-text-light);
+  border-radius: 10px;
+  padding: 7px 12px;
+  font-size: 1.15rem;
+  letter-spacing: 0.2px;
 }
 
 h2.color3 {
   display: inline-block;
   background-color: var(--color-card-3);
-  color: var(--color-text-white);
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-size: 20px;
+  color: var(--color-card-text-light);
+  border-radius: 10px;
+  padding: 7px 12px;
+  font-size: 1.15rem;
+  letter-spacing: 0.2px;
+}
+
+h2.color4,
+h2.color5,
+h2.color6 {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 7px 12px;
+  font-size: 1.15rem;
+  letter-spacing: 0.2px;
+  color: var(--color-card-text-dark);
 }
 
 h2.color4 {
-  display: inline-block;
   background-color: var(--color-card-4);
-  color: var(--color-text-white);
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-size: 20px;
 }
 
 h2.color5 {
-  display: inline-block;
   background-color: var(--color-card-5);
-  color: var(--color-text-white);
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-size: 20px;
 }
 
 h2.color6 {
-  display: inline-block;
   background-color: var(--color-card-6);
-  color: var(--color-card-6-text);
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-size: 20px;
 }
 
 /* RESPONSIVE */

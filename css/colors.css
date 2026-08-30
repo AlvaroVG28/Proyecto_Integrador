@@ -21,7 +21,8 @@
   --color-card-4: #52b788; /* Tarjeta color 4 */
   --color-card-5: #74c69d; /* Tarjeta color 5 */
   --color-card-6: #95d5b2; /* Tarjeta color 6 */
-  --color-card-6-text: #1b4332; /* Texto tarjeta 6 */
+  --color-card-text-dark: #123828; /* Texto de tarjetas verdes claras */
+  --color-card-text-light: #bdd3c8df; /* Texto de tarjetas verdes oscuras */
 
   /* COLORES DE TEXTO */
   --color-text-white: #ffffff; /* Texto blanco */
@@ -35,9 +36,9 @@
   --color-delete: #dc2626; /* Rojo - Eliminar */
 
   /* COLORES DE FONDO */
-  --color-bg-white: #f5f6f7; /* Gris muy claro */
-  --color-bg-light: #f0f2f5; /* Gris claro */
-  --color-bg-topbar: #f5f6f7; /* Topbar gris claro */
+  --color-bg-white: #c9d1d7; /* Gris azulado medio */
+  --color-bg-light: #bcc4ca; /* Gris claro moderno */
+  --color-bg-topbar: #c9d1d7; /* Topbar gris azulado */
   --color-bg-footer: #95d5b2; /* Footer verde claro */
 
   /* COLORES DE BORDES */
