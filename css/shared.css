@@ -16,48 +16,49 @@
   --shadow-card: 0 10px 24px rgba(27, 67, 50, 0.12);
 
   /* COLORES PRINCIPALES */
-  --color-primary-dark: #1b4332;
-  --color-primary-medium: #2d6a4f;
-  --color-primary-light: #95d5b2;
+  --color-primary-dark: #1b4332; /* Verde oscuro - Sidebar */
+  --color-primary-medium: #2d6a4f; /* Verde grisáceo - Fondo main */
+  --color-primary-light: #95d5b2; /* Verde claro - Footer y acentos */
 
-  /* COLORES SECUNDARIOS */
-  --color-button-main: #40916c;
-  --color-button-hover: #2d6a4f;
+  /* COLORES SECUNDARIOS - Botones y controles */
+  --color-button-main: #40916c; /* Verde medio - Botones */
+  --color-button-hover: #2d6a4f; /* Verde oscuro - Hover botones */
 
-  /* COLORES DE TARJETAS */
-  --color-card-1: #1b4332;
-  --color-card-2: #2d6a4f;
-  --color-card-3: #40916c;
-  --color-card-4: #52b788;
-  --color-card-5: #74c69d;
-  --color-card-6: #95d5b2;
-  --color-card-6-text: #1b4332;
+  /* COLORES DE TARJETAS - Dashboard */
+  --color-card-1: #1b4332; /* Tarjeta color 1 */
+  --color-card-2: #2d6a4f; /* Tarjeta color 2 */
+  --color-card-3: #40916c; /* Tarjeta color 3 */
+  --color-card-4: #52b788; /* Tarjeta color 4 */
+  --color-card-5: #74c69d; /* Tarjeta color 5 */
+  --color-card-6: #95d5b2; /* Tarjeta color 6 */
+  --color-card-text-dark: #123828; /* Texto de tarjetas verdes claras */
+  --color-card-text-light: #bdd3c8df; /* Texto de tarjetas verdes oscuras */
 
   /* COLORES DE TEXTO */
-  --color-text-white: #ffffff;
-  --color-text-light: #f4f3f3;
-  --color-text-dark: #111111;
-  --color-text-gray: #6b7280;
-  --color-text-muted: #95d5b2;
+  --color-text-white: #ffffff; /* Texto blanco */
+  --color-text-light: #f4f3f3; /* Texto claro en fondo oscuro */
+  --color-text-dark: #111111; /* Texto oscuro */
+  --color-text-gray: #6b7280; /* Texto gris */
+  --color-text-muted: #95d5b2; /* Texto muteado (verde claro) */
 
   /* COLORES DE ACCIONES */
-  --color-edit: #2563eb;
-  --color-delete: #dc2626;
+  --color-edit: #2563eb; /* Azul - Editar */
+  --color-delete: #dc2626; /* Rojo - Eliminar */
 
   /* COLORES DE FONDO */
-  --color-bg-white: #c9d1d7;
-  --color-bg-light: #bcc4ca;
-  --color-bg-topbar: #c9d1d7;
-  --color-bg-footer: #95d5b2;
+  --color-bg-white: #c9d1d7; /* Gris azulado medio */
+  --color-bg-light: #bcc4ca; /* Gris claro moderno */
+  --color-bg-topbar: #c9d1d7; /* Topbar gris azulado */
+  --color-bg-footer: #95d5b2; /* Footer verde claro */
 
   /* COLORES DE BORDES */
-  --color-border-light: #e2e4ec;
-  --color-border-dark: #1b4332;
-  --color-border-table: #eef0f5;
+  --color-border-light: #e2e4ec; /* Borde claro */
+  --color-border-dark: #1b4332; /* Borde oscuro */
+  --color-border-table: #eef0f5; /* Borde tabla */
 
   /* COLORES DE FOCO */
-  --color-focus-border: #40916c;
-  --color-focus-shadow: rgba(64, 145, 108, 0.1);
+  --color-focus-border: #40916c; /* Border en focus */
+  --color-focus-shadow: rgba(64, 145, 108, 0.1); /* Shadow en focus */
 }
 
 /* ====================================
