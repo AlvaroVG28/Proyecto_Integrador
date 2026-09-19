@@ -4,14 +4,19 @@
    ==================================== */
 
 :root {
+  /* COLORES DEL FORMULARIO DE ESTUDIANTES
+       Se identifican con [FORMULARIO] en las variables compartidas. */
+
   /* COLORES PRINCIPALES */
-  --color-primary-dark: #1b4332; /* Verde oscuro - Sidebar */
-  --color-primary-medium: #2d6a4f; /* Verde grisáceo - Fondo main */
+  --color-primary-dark: #1b4332; /* Verde oscuro - Sidebar [FORMULARIO] */
+  --color-primary-medium: #2d6a4f; /* Verde grisáceo - Fondo main [FORMULARIO] */
   --color-primary-light: #95d5b2; /* Verde claro - Footer y acentos */
 
   /* COLORES SECUNDARIOS - Botones y controles */
   --color-button-main: #40916c; /* Verde medio - Botones */
   --color-button-hover: #2d6a4f; /* Verde oscuro - Hover botones */
+  --color-button-success-hover: #24583f; /* Hover Crear [FORMULARIO] */
+  --color-button-danger-hover: #963d3d; /* Hover Cancelar [FORMULARIO] */
 
   /* COLORES DE TARJETAS - Dashboard */
   --color-card-1: #1b4332; /* Tarjeta color 1 */
@@ -26,28 +31,33 @@
   /* COLORES DE TEXTO */
   --color-text-white: #ffffff; /* Texto blanco */
   --color-text-light: #f4f3f3; /* Texto claro en fondo oscuro */
-  --color-text-dark: #111111; /* Texto oscuro */
-  --color-text-gray: #6b7280; /* Texto gris */
+  --color-text-dark: #111111; /* Texto oscuro [FORMULARIO] */
+  --color-text-gray: #6b7280; /* Texto gris [FORMULARIO] */
   --color-text-muted: #95d5b2; /* Texto muteado (verde claro) */
 
   /* COLORES DE ACCIONES */
   --color-edit: #2563eb; /* Azul - Editar */
-  --color-delete: #dc2626; /* Rojo - Eliminar */
+  --color-delete: #dc2626; /* Rojo - Eliminar y Cancelar [FORMULARIO] */
 
   /* COLORES DE FONDO */
-  --color-bg-white: #c9d1d7; /* Gris azulado medio */
-  --color-bg-light: #bcc4ca; /* Gris claro moderno */
+  --color-bg-white: #c9d1d7; /* Gris azulado medio [FORMULARIO] */
+  --color-bg-light: #bcc4ca; /* Gris claro moderno [FORMULARIO] */
   --color-bg-topbar: #c9d1d7; /* Topbar gris azulado */
   --color-bg-footer: #95d5b2; /* Footer verde claro */
 
   /* COLORES DE BORDES */
-  --color-border-light: #e2e4ec; /* Borde claro */
+  --color-border-light: #e2e4ec; /* Borde claro [FORMULARIO] */
   --color-border-dark: #1b4332; /* Borde oscuro */
   --color-border-table: #eef0f5; /* Borde tabla */
 
   /* COLORES DE FOCO */
-  --color-focus-border: #40916c; /* Border en focus */
-  --color-focus-shadow: rgba(64, 145, 108, 0.1); /* Shadow en focus */
+  --color-focus-border: #40916c; /* Border en focus [FORMULARIO] */
+  --color-focus-shadow: rgba(
+    64,
+    145,
+    108,
+    0.1
+  ); /* Shadow en focus [FORMULARIO] */
 }
 
 /* ====================================

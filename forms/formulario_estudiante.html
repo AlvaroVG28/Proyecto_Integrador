@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Estudiante</title>
+    <link rel="stylesheet" href="../css/colors.css" />
+    <link rel="stylesheet" href="../css/formulario_estudiante.css" />
+  </head>
+  <body>
+    <div class="container-forms">
+      <form class="form-student">
+        <h2 class="title-form">Crear Estudiante</h2>
+
+        <div class="form-group inputs">
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input
+              id="nombre"
+              type="text"
+              name="nombre"
+              placeholder="Nombre…"
+              autocomplete="given-name"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="apellido">Apellido</label>
+            <input
+              id="apellido"
+              type="text"
+              name="apellido"
+              placeholder="Apellido…"
+              autocomplete="family-name"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="correo@ejemplo.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input
+              id="telefono"
+              type="tel"
+              name="telefono"
+              placeholder="Teléfono…"
+              autocomplete="tel"
+              inputmode="tel"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group btns">
+          <button type="submit" class="btn-submit">Crear</button>
+          <a href="../Paginas_Principales/ESTUDIANTES.html" class="btn-reset">
+            Cancelar
+          </a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
