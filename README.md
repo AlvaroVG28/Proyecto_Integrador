@@ -1,94 +1,61 @@
-# Guía de Estructura del Proyecto
+# Sistema de Gestión de Cursos
 
-## 📁 Organización de Carpetas
+Proyecto web estático para administrar visualmente cursos, estudiantes y
+matrículas.
 
+## Estructura del proyecto
+
+```text
+Semana13_AlvaroVera/
+├── Paginas_Principales/
+│   ├── DASHBOARD.html
+│   ├── CURSOS.html
+│   ├── ESTUDIANTES.html
+│   └── MATRICULA.html
+├── forms/
+│   └── formulario_estudiante.html
+├── css/
+│   ├── colors.css
+│   ├── shared.css
+│   ├── dashboard.css
+│   ├── cursos.css
+│   ├── estudiantes.css
+│   ├── formulario_estudiante.css
+│   └── matricula.css
+└── img/
+    ├── cursos_populares.png
+    └── matriculas_estado.png
 ```
-Semana05_AlvaroVera/
-│
-├── DASHBOARD.html          # Página principal del dashboard
-├── CURSOS.html             # Página de gestión de cursos
-├── ESTUDIANTES.html        # Página de gestión de estudiantes
-├── MATRICULA.html          # Página de gestión de matrículas
-│
-└── css/                    # Carpeta de estilos CSS
-    ├── shared.css          # Estilos comunes a todas las páginas
-    ├── dashboard.css       # Estilos específicos del dashboard
-    ├── cursos.css          # Estilos específicos de cursos
-    ├── estudiantes.css     # Estilos específicos de estudiantes
-    └── matricula.css       # Estilos específicos de matrículas
+
+## Páginas
+
+- `DASHBOARD.html`: resumen general con tarjetas y gráficos.
+- `CURSOS.html`: listado de cursos registrados.
+- `ESTUDIANTES.html`: listado de estudiantes y acceso al formulario de alta.
+- `MATRICULA.html`: listado de matrículas y filtro de estado.
+- `formulario_estudiante.html`: formulario visual para crear estudiantes.
+
+## Estilos
+
+- `colors.css` contiene todas las variables de color del proyecto.
+- `shared.css` contiene el reset, la estructura común, navegación, botones,
+  controles, tablas y estilos responsive.
+- Cada archivo CSS restante contiene los estilos específicos de su página.
+
+Las páginas principales incluyen los estilos con rutas relativas:
+
+```html
+<link rel="stylesheet" href="../css/colors.css" />
+<link rel="stylesheet" href="../css/shared.css" />
 ```
 
-## 🎨 Descripción de los Archivos CSS
+## Cómo abrir el proyecto
 
-### `shared.css` (Estilos Compartidos)
+Abre `Paginas_Principales/DASHBOARD.html` en un navegador web. También puedes
+usar una extensión como Live Server para facilitar la navegación entre páginas.
 
-Contiene todos los estilos que se repiten en las 4 páginas:
+## Estado actual
 
-- Reset de estilos CSS (_margin_, _padding_, _box-sizing_)
-- Estilos del body
-- Layout principal (flexbox)
-- Estilos del header/sidebar
-- Estilos de navegación
-- Estilos de footer
-- Estilos de botones
-- Estilos de inputs
-- Estilos de tablas
-- Estilos de acciones (editar/eliminar)
-
-### `dashboard.css` (Estilos del Dashboard)
-
-Estilos específicos para la página principal:
-
-- Contenido principal
-- Header de contenido
-- Grid de tarjetas
-- Colores de tarjetas (color1 hasta color6)
-- Responsive design
-
-### `cursos.css` (Estilos de Cursos)
-
-Estilos específicos para la página de cursos:
-
-- Contenido de la página
-- Header de contenido
-- Búsqueda
-
-### `estudiantes.css` (Estilos de Estudiantes)
-
-Estilos específicos para la página de estudiantes:
-
-- Contenido de la página
-- Header de contenido
-- Búsqueda
-
-### `matricula.css` (Estilos de Matrículas)
-
-Estilos específicos para la página de matrículas:
-
-- Contenido de la página
-- Header de contenido
-- Búsqueda
-- Filtro de estado
-
-## ✨ Ventajas de esta Organización
-
-1. **Mantenibilidad**: El código CSS está separado y organizado
-2. **Reutilización**: Los estilos comunes están en un archivo central
-3. **Escalabilidad**: Fácil agregar nuevas páginas y estilos
-4. **Rendimiento**: Los navegadores cachean mejor los archivos CSS
-5. **Claridad**: Cada página tiene solo sus estilos específicos
-6. **Consistencia**: Todos los estilos comunes están centralizados
-
-## 🚀 Cómo Usar
-
-1. Asegúrate de que la carpeta `css/` esté en la misma carpeta que los archivos HTML
-2. Cada archivo HTML importa automáticamente:
-   - `css/shared.css` (estilos comunes)
-   - `css/[nombre_pagina].css` (estilos específicos)
-
-## 📝 Notas
-
-- Los estilos están bien comentados y organizados
-- Se han agregado estilos hover para mejorar la UX
-- Incluye media queries responsive (en dashboard.css)
-- Todos los colores y dimensiones son consistentes
+La interfaz y la navegación básica están implementadas. Los datos mostrados
+son estáticos; las acciones de crear, editar, eliminar, buscar y filtrar
+requieren JavaScript o una conexión con un backend para ser funcionales.

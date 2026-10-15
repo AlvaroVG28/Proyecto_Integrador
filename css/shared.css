@@ -15,50 +15,6 @@
   --shadow-soft: 0 8px 22px rgba(17, 17, 17, 0.08);
   --shadow-card: 0 10px 24px rgba(27, 67, 50, 0.12);
 
-  /* COLORES PRINCIPALES */
-  --color-primary-dark: #1b4332; /* Verde oscuro - Sidebar */
-  --color-primary-medium: #2d6a4f; /* Verde grisáceo - Fondo main */
-  --color-primary-light: #95d5b2; /* Verde claro - Footer y acentos */
-
-  /* COLORES SECUNDARIOS - Botones y controles */
-  --color-button-main: #40916c; /* Verde medio - Botones */
-  --color-button-hover: #2d6a4f; /* Verde oscuro - Hover botones */
-
-  /* COLORES DE TARJETAS - Dashboard */
-  --color-card-1: #1b4332; /* Tarjeta color 1 */
-  --color-card-2: #2d6a4f; /* Tarjeta color 2 */
-  --color-card-3: #40916c; /* Tarjeta color 3 */
-  --color-card-4: #52b788; /* Tarjeta color 4 */
-  --color-card-5: #74c69d; /* Tarjeta color 5 */
-  --color-card-6: #95d5b2; /* Tarjeta color 6 */
-  --color-card-text-dark: #123828; /* Texto de tarjetas verdes claras */
-  --color-card-text-light: #bdd3c8df; /* Texto de tarjetas verdes oscuras */
-
-  /* COLORES DE TEXTO */
-  --color-text-white: #ffffff; /* Texto blanco */
-  --color-text-light: #f4f3f3; /* Texto claro en fondo oscuro */
-  --color-text-dark: #111111; /* Texto oscuro */
-  --color-text-gray: #6b7280; /* Texto gris */
-  --color-text-muted: #95d5b2; /* Texto muteado (verde claro) */
-
-  /* COLORES DE ACCIONES */
-  --color-edit: #2563eb; /* Azul - Editar */
-  --color-delete: #dc2626; /* Rojo - Eliminar */
-
-  /* COLORES DE FONDO */
-  --color-bg-white: #c9d1d7; /* Gris azulado medio */
-  --color-bg-light: #bcc4ca; /* Gris claro moderno */
-  --color-bg-topbar: #c9d1d7; /* Topbar gris azulado */
-  --color-bg-footer: #95d5b2; /* Footer verde claro */
-
-  /* COLORES DE BORDES */
-  --color-border-light: #e2e4ec; /* Borde claro */
-  --color-border-dark: #1b4332; /* Borde oscuro */
-  --color-border-table: #eef0f5; /* Borde tabla */
-
-  /* COLORES DE FOCO */
-  --color-focus-border: #40916c; /* Border en focus */
-  --color-focus-shadow: rgba(64, 145, 108, 0.1); /* Shadow en focus */
 }
 
 /* ====================================
@@ -385,4 +341,125 @@ th {
 
 .accion-eliminar:hover {
   text-decoration: underline;
+}
+
+/* RESPONSIVE PARA PAGINAS PRINCIPALES */
+@media (max-width: 768px) {
+  .dashboard,
+  .courses,
+  .estudiantes,
+  .matricula {
+    display: block;
+  }
+
+  .dashboard-header,
+  .courses-header,
+  .estudiantes-header,
+  .matricula-header {
+    width: 100%;
+    height: auto;
+  }
+
+  .dashboard-header h1,
+  .courses-header h1,
+  .estudiantes-header h1,
+  .matricula-header h1 {
+    margin-bottom: 12px;
+  }
+
+  .dashboard-nav,
+  .courses-nav,
+  .estudiantes-nav,
+  .matricula-nav {
+    margin: 0;
+  }
+
+  .dashboard-nav ul,
+  .courses-nav ul,
+  .estudiantes-nav ul,
+  .matricula-nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0;
+    padding: 0 20px 16px;
+  }
+
+  .dashboard-nav a,
+  .courses-nav a,
+  .estudiantes-nav a,
+  .matricula-nav a {
+    padding: 8px 10px;
+  }
+
+  .dashboard-footer-sydebar,
+  .courses-footer-sydebar,
+  .estudiantes-footer-sydebar,
+  .matricula-footer-sydebar {
+    display: none;
+  }
+
+  .dashboard-main,
+  .courses-main,
+  .estudiantes-main,
+  .matricula-main {
+    min-height: auto;
+  }
+
+  .dashboard-topbar,
+  .courses-topbar,
+  .estudiantes-topbar,
+  .matricula-topbar {
+    padding: 18px 20px;
+  }
+
+  .dashboard-topbar h2,
+  .courses-topbar h2,
+  .estudiantes-topbar h2,
+  .matricula-topbar h2 {
+    font-size: 1.25rem;
+  }
+
+  .dashboard-content,
+  .courses-content,
+  .estudiantes-content,
+  .matricula-content {
+    padding: 20px;
+  }
+
+  .courses-content-header,
+  .estudiantes-content-header,
+  .matricula-content-header {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .tabla-courses,
+  .tabla-estudiantes,
+  .tabla-matricula {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-content,
+  .courses-content,
+  .estudiantes-content,
+  .matricula-content {
+    padding: 16px;
+  }
+
+  .dashboard-content-header h1,
+  .courses-content-header h1,
+  .estudiantes-content-header h1,
+  .matricula-content-header h1 {
+    font-size: 1.65rem;
+  }
+
+  .btn-nuevo {
+    width: 100%;
+    justify-content: center;
+  }
 }
