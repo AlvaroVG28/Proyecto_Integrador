@@ -82,6 +82,10 @@ body {
   color: var(--color-text-gray);
 }
 
+.inputs input:hover {
+  border-color: var(--color-focus-border);
+}
+
 .inputs input:focus-visible {
   border-color: var(--color-focus-border);
   box-shadow: 0 0 0 3px var(--color-focus-shadow);
