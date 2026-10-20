@@ -76,11 +76,16 @@ body {
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease,
-    background-color 0.2s ease;
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .inputs input::placeholder {
   color: var(--color-text-gray);
+}
+
+.inputs input:placeholder-shown {
+  font-style: italic;
 }
 
 .inputs input:hover {
@@ -104,6 +109,12 @@ body {
 .inputs input:user-invalid {
   border-color: var(--color-delete);
   background-color: rgba(220, 38, 38, 0.08);
+}
+
+.inputs input:focus {
+  outline: none;
+  border-color: var(--color-focus-border);
+  box-shadow: 0 0 0 3px var(--color-focus-shadow);
 }
 
 .btns {
