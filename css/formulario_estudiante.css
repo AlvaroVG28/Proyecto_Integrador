@@ -49,6 +49,11 @@ body {
   text-align: center;
 }
 
+.title-form::first-letter {
+  color: var(--color-button-main);
+  font-size: 1.3em;
+}
+
 .inputs label {
   display: block;
   margin-bottom: 7px;

@@ -84,6 +84,14 @@ th {
   letter-spacing: 0.3px;
 }
 
+.dashboard-content-header h1::first-letter,
+.courses-content-header h1::first-letter,
+.estudiantes-content-header h1::first-letter,
+.matricula-content-header h1::first-letter {
+  color: var(--color-primary-light);
+  font-size: 1.3em;
+}
+
 /* LAYOUT PRINCIPAL */
 .dashboard,
 .courses,
@@ -183,6 +191,15 @@ th {
   color: rgb(184, 183, 194);
   margin-top: auto;
   padding: 20px;
+}
+
+.dashboard-footer-sydebar p:last-child,
+.courses-footer-sydebar p:last-child,
+.estudiantes-footer-sydebar p:last-child,
+.matricula-footer-sydebar p:last-child {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
 }
 
 /* MAIN CONTENT */
@@ -331,6 +348,12 @@ th {
   font-size: 14px;
   color: var(--color-text-dark);
   transition: background-color 0.2s ease;
+}
+
+.tabla-courses tbody tr:nth-child(odd) td,
+.tabla-estudiantes tbody tr:nth-child(odd) td,
+.tabla-matricula tbody tr:nth-child(odd) td {
+  background-color: rgba(27, 67, 50, 0.08);
 }
 
 .tabla-courses tr:last-child td,
