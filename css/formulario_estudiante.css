@@ -75,7 +75,8 @@ body {
   font-size: 0.95rem;
   transition:
     border-color 0.2s ease,
-    box-shadow 0.2s ease;
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .inputs input::placeholder {
@@ -89,6 +90,20 @@ body {
 .inputs input:focus-visible {
   border-color: var(--color-focus-border);
   box-shadow: 0 0 0 3px var(--color-focus-shadow);
+}
+
+/* Nombre, apellido, correo y teléfono: tienen required; el correo también exige formato */
+.inputs input:valid {
+  border-color: var(--color-button-main);
+}
+
+.inputs input:invalid {
+  border-color: var(--color-delete);
+}
+
+.inputs input:user-invalid {
+  border-color: var(--color-delete);
+  background-color: rgba(220, 38, 38, 0.08);
 }
 
 .btns {
