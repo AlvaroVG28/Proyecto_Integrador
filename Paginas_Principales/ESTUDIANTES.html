@@ -4,45 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ESTUDIANTES</title>
-    <link rel="stylesheet" href="../css/shared.css" />
     <link rel="stylesheet" href="../css/colors.css" />
-    <link rel="stylesheet" href="../css/estudiantes.css" />
+    <link rel="stylesheet" href="../css/shared.css" />
   </head>
 
   <!-- ======================================
        PÁGINA: ESTUDIANTES
        Descripción: gestión de estudiantes registrados
        ====================================== -->
-  <body class="estudiantes">
+  <body class="layout">
     <!-- SIDEBAR / MENÚ LATERAL -->
-    <header class="estudiantes-header">
-      <h1>Sistema de Gestión de Recursos</h1>
-      <nav class="estudiantes-nav">
-        <ul class="estudiantes-menu">
-          <li><a href="DASHBOARD.html" target="_self"> Inicio</a></li>
+    <aside class="sidebar">
+      <p class="sidebar-title">Sistema de Gestión de Cursos</p>
+      <nav class="sidebar-nav">
+        <ul class="sidebar-menu">
+          <li><a href="DASHBOARD.html" target="_self">Inicio</a></li>
           <li><a href="CURSOS.html" target="_self">Cursos</a></li>
-          <li><a href="ESTUDIANTES.html" target="_self">Estudiantes</a></li>
+          <li><a href="ESTUDIANTES.html" target="_self" aria-current="page">Estudiantes</a></li>
           <li><a href="MATRICULA.html" target="_self">Matrícula</a></li>
         </ul>
       </nav>
 
-      <footer class="estudiantes-footer-sydebar">
+      <footer class="sidebar-footer">
         <p>Alvaro Vera</p>
         <p>alvera@cesde.net</p>
       </footer>
-    </header>
+    </aside>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main class="estudiantes-main">
+    <main class="page-main">
       <!-- BARRA SUPERIOR -->
-      <header class="estudiantes-topbar">
+      <header class="topbar">
         <h2>Sistema de Gestión de Cursos</h2>
       </header>
 
       <!-- SECCIÓN DE CONTENIDO DE ESTUDIANTES -->
-      <section class="estudiantes-content">
+      <section class="page-content">
         <!-- ENCABEZADO DE LA PÁGINA -->
-        <header class="estudiantes-content-header">
+        <header class="page-header">
           <hgroup>
             <h1>Estudiantes</h1>
             <p>Gestión de estudiantes registrados</p>
@@ -56,13 +55,14 @@
         <!-- AQUÍ VA EL BUSCADOR DE ESTUDIANTES -->
         <input
           type="text"
-          class="buscar-estudiante"
+          class="buscador"
           placeholder="Buscar estudiante..."
+          aria-label="Buscar estudiante"
         />
 
         <!-- AQUÍ IRÁ LA TABLA DE ESTUDIANTES -->
         <!-- TABLA DE ESTUDIANTES: columnas = nombre, apellido, correo, celular y acciones -->
-        <table class="tabla-estudiantes">
+        <table class="tabla">
           <thead>
             <tr>
               <th>Nombre</th>
@@ -107,7 +107,7 @@
         </table>
       </section>
 
-      <footer class="estudiantes-footer-main">
+      <footer class="page-footer">
         <p>©2026 Sistema de Gestión de Cursos</p>
       </footer>
     </main>

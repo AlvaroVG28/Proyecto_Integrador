@@ -2,49 +2,25 @@
    ESTILOS ESPECÍFICOS - DASHBOARD
    ==================================== */
 
-.dashboard-content {
-  padding: 30px;
-}
-
-.dashboard-content-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-
-.dashboard-content-header h1 {
-  font-size: 24px;
-  color: var(--color-text-light);
-  margin-bottom: 10px;
-}
-
-.dashboard-content-header p {
-  font-size: 14px;
-  color: var(--color-text-muted);
-}
-
 /* GRID DE TARJETAS */
 .dashboard-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
-  padding: 18px 16px 12px;
+  /* el margen lateral lo da .page-content, igual que en las demás páginas */
+  margin-bottom: 22px;
 }
 
 .card {
   background: linear-gradient(
     180deg,
-    rgba(244, 246, 241, 0.98),
-    rgba(226, 234, 228, 0.96)
+    var(--color-card-bg-top),
+    var(--color-card-bg-bottom)
   );
   color: var(--color-text-dark);
   padding: 22px 20px 18px;
   border-radius: 18px;
   box-shadow: 0 8px 20px rgba(17, 17, 17, 0.08);
-  margin-left: 20px;
-  margin-right: 20px;
-  flex: 1;
   border: 1px solid rgba(27, 67, 50, 0.06);
   transition:
     transform 0.2s ease,
@@ -68,7 +44,6 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
-  padding: 12px 36px 24px;
 }
 
 .dashboard-image-card {
@@ -98,34 +73,27 @@
 }
 
 /* COLORES DE TARJETAS */
-h2.color1 {
+h2.color1,
+h2.color2,
+h2.color3 {
   display: inline-block;
-  background-color: var(--color-card-1);
   color: var(--color-card-text-light);
   border-radius: 10px;
   padding: 7px 12px;
   font-size: 1.15rem;
   letter-spacing: 0.2px;
+}
+
+h2.color1 {
+  background-color: var(--color-card-1);
 }
 
 h2.color2 {
-  display: inline-block;
   background-color: var(--color-card-2);
-  color: var(--color-card-text-light);
-  border-radius: 10px;
-  padding: 7px 12px;
-  font-size: 1.15rem;
-  letter-spacing: 0.2px;
 }
 
 h2.color3 {
-  display: inline-block;
   background-color: var(--color-card-3);
-  color: var(--color-card-text-light);
-  border-radius: 10px;
-  padding: 7px 12px;
-  font-size: 1.15rem;
-  letter-spacing: 0.2px;
 }
 
 /* RESPONSIVE */
@@ -142,15 +110,17 @@ h2.color3 {
 
   .dashboard-images {
     grid-template-columns: 1fr;
-    padding-left: 16px;
-    padding-right: 16px;
   }
 }
 
 @media (max-width: 480px) {
+  .dashboard-cards {
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
   .dashboard-images {
     gap: 16px;
-    padding: 12px 8px 20px;
   }
 
   .dashboard-image-card {

@@ -4,45 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CURSOS</title>
-    <link rel="stylesheet" href="../css/shared.css" />
     <link rel="stylesheet" href="../css/colors.css" />
-    <link rel="stylesheet" href="../css/cursos.css" />
+    <link rel="stylesheet" href="../css/shared.css" />
   </head>
 
   <!-- ======================================
        PÁGINA: CURSOS
        Descripción: gestión de cursos registrados
        ====================================== -->
-  <body class="courses">
+  <body class="layout">
     <!-- SIDEBAR / MENÚ LATERAL -->
-    <header class="courses-header">
-      <h1>Sistema de Gestión de Recursos</h1>
-      <nav class="courses-nav">
-        <ul class="courses-menu">
+    <aside class="sidebar">
+      <p class="sidebar-title">Sistema de Gestión de Cursos</p>
+      <nav class="sidebar-nav">
+        <ul class="sidebar-menu">
           <li><a href="DASHBOARD.html" target="_self">Inicio</a></li>
-          <li><a href="CURSOS.html" target="_self">Cursos</a></li>
+          <li><a href="CURSOS.html" target="_self" aria-current="page">Cursos</a></li>
           <li><a href="ESTUDIANTES.html" target="_self">Estudiantes</a></li>
           <li><a href="MATRICULA.html" target="_self">Matrícula</a></li>
         </ul>
       </nav>
 
-      <footer class="courses-footer-sydebar">
+      <footer class="sidebar-footer">
         <p>Alvaro Vera</p>
         <p>alvera@cesde.net</p>
       </footer>
-    </header>
+    </aside>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main class="courses-main">
+    <main class="page-main">
       <!-- BARRA SUPERIOR -->
-      <header class="courses-topbar">
+      <header class="topbar">
         <h2>Sistema de Gestión de Cursos</h2>
       </header>
 
       <!-- SECCIÓN DE CONTENIDO DE CURSOS -->
-      <section class="courses-content">
+      <section class="page-content">
         <!-- ENCABEZADO DE LA PÁGINA -->
-        <header class="courses-content-header">
+        <header class="page-header">
           <hgroup>
             <h1>Cursos</h1>
             <p>Gestión de cursos registrados</p>
@@ -52,14 +51,19 @@
         </header>
 
         <!-- AQUÍ VA EL BUSCADOR DE CURSOS -->
-        <input type="text" class="buscar-curso" placeholder="Buscar curso..." />
+        <input
+          type="text"
+          class="buscador"
+          placeholder="Buscar curso..."
+          aria-label="Buscar curso"
+        />
 
         <!-- AQUÍ IRÁ LA TABLA DE CURSOS -->
         <!-- TABLA DE CURSOS: columnas = código, nombre del curso, capacidad y acciones -->
-        <table class="tabla-courses">
+        <table class="tabla">
           <thead>
             <tr>
-              <th>Codigo</th>
+              <th>Código</th>
               <th>Curso</th>
               <th>Capacidad</th>
               <th>Acciones</th>
@@ -88,7 +92,7 @@
         </table>
       </section>
 
-      <footer class="courses-footer-main">
+      <footer class="page-footer">
         <p>©2026 Sistema de Gestión de Cursos</p>
       </footer>
     </main>

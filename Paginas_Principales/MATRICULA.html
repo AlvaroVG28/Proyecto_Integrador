@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matrícula</title>
-    <link rel="stylesheet" href="../css/shared.css" />
     <link rel="stylesheet" href="../css/colors.css" />
+    <link rel="stylesheet" href="../css/shared.css" />
     <link rel="stylesheet" href="../css/matricula.css" />
   </head>
 
@@ -13,36 +13,36 @@
        PÁGINA: MATRÍCULA
        Descripción: gestión de matrículas registradas
        ====================================== -->
-  <body class="matricula">
+  <body class="layout">
     <!-- SIDEBAR / MENÚ LATERAL -->
-    <header class="matricula-header">
-      <h1>Sistema de Gestión de Recursos</h1>
-      <nav class="matricula-nav">
-        <ul class="matricula-menu">
-          <li><a href="DASHBOARD.html" target="_self"> Inicio</a></li>
+    <aside class="sidebar">
+      <p class="sidebar-title">Sistema de Gestión de Cursos</p>
+      <nav class="sidebar-nav">
+        <ul class="sidebar-menu">
+          <li><a href="DASHBOARD.html" target="_self">Inicio</a></li>
           <li><a href="CURSOS.html" target="_self">Cursos</a></li>
           <li><a href="ESTUDIANTES.html" target="_self">Estudiantes</a></li>
-          <li><a href="MATRICULA.html" target="_self">Matrícula</a></li>
+          <li><a href="MATRICULA.html" target="_self" aria-current="page">Matrícula</a></li>
         </ul>
       </nav>
 
-      <footer class="matricula-footer-sydebar">
+      <footer class="sidebar-footer">
         <p>Alvaro Vera</p>
         <p>alvera@cesde.net</p>
       </footer>
-    </header>
+    </aside>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main class="matricula-main">
+    <main class="page-main">
       <!-- BARRA SUPERIOR -->
-      <header class="matricula-topbar">
+      <header class="topbar">
         <h2>Sistema de Gestión de Cursos</h2>
       </header>
 
       <!-- SECCIÓN DE CONTENIDO DE MATRÍCULA -->
-      <section class="matricula-content">
+      <section class="page-content">
         <!-- ENCABEZADO DE LA PÁGINA -->
-        <header class="matricula-content-header">
+        <header class="page-header">
           <hgroup>
             <h1>Matrículas</h1>
             <p>Gestión de matrículas registradas</p>
@@ -52,7 +52,7 @@
         </header>
 
         <!-- AQUÍ VA EL FILTRO POR ESTADO -->
-        <select class="filtro-estado">
+        <select class="filtro-estado" aria-label="Filtrar por estado">
           <option value="todos">Todos los estados</option>
           <option value="activa">Activa</option>
           <option value="completada">Completada</option>
@@ -62,13 +62,14 @@
         <!-- AQUÍ VA EL BUSCADOR -->
         <input
           type="text"
-          class="buscar-matricula"
+          class="buscador"
           placeholder="Buscar estudiante o curso..."
+          aria-label="Buscar estudiante o curso"
         />
 
         <!-- AQUÍ IRÁ LA TABLA DE MATRÍCULAS -->
         <!-- TABLA DE MATRÍCULAS: columnas = estudiante, curso, fecha, estado y acciones -->
-        <table class="tabla-matricula">
+        <table class="tabla">
           <thead>
             <tr>
               <th>Estudiante</th>
@@ -125,7 +126,7 @@
         </table>
       </section>
 
-      <footer class="matricula-footer-main">
+      <footer class="page-footer">
         <p>©2026 Sistema de Gestión de Cursos</p>
       </footer>
     </main>

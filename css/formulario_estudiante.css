@@ -5,7 +5,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Poppins", sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--color-text-dark);
   background-color: var(--color-bg-light);
 }
@@ -36,8 +36,8 @@ body {
   border-radius: 18px;
   background: linear-gradient(
     180deg,
-    rgba(244, 246, 241, 0.98),
-    rgba(226, 234, 228, 0.96)
+    var(--color-card-bg-top),
+    var(--color-card-bg-bottom)
   );
   box-shadow: 0 16px 32px rgba(27, 67, 50, 0.14);
 }
@@ -75,7 +75,7 @@ body {
   border: 1px solid var(--color-border-light);
   border-radius: 10px;
   color: var(--color-text-dark);
-  background-color: var(--color-bg-white);
+  background-color: var(--color-bg-surface);
   font: inherit;
   font-size: 0.95rem;
   transition:
@@ -102,13 +102,11 @@ body {
   box-shadow: 0 0 0 3px var(--color-focus-shadow);
 }
 
-/* Nombre, apellido, correo y teléfono: tienen required; el correo también exige formato */
+/* Nombre, apellido, correo y teléfono: tienen required; el correo también exige formato.
+   Se usa :user-invalid (y no :invalid) para marcar el error solo después de que
+   el usuario interactúa con el campo, no apenas carga la página. */
 .inputs input:valid {
   border-color: var(--color-button-main);
-}
-
-.inputs input:invalid {
-  border-color: var(--color-delete);
 }
 
 .inputs input:user-invalid {
@@ -140,7 +138,7 @@ body {
   padding: 11px 20px;
   border: none;
   border-radius: 10px;
-  color: white;
+  color: var(--color-text-white);
   font-family: inherit;
   font-size: 14px;
   font-weight: 600;

@@ -1,20 +1,16 @@
 /* ====================================
-   PALETA DE COLORES CENTRALIZADA
+   TIPOGRAFÍAS Y SOMBRAS COMPARTIDAS
+   (los colores están en colors.css)
    ==================================== */
 
 :root {
   /* TIPOGRAFÍAS */
   --font-body: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --font-title: "Avenir Next", "Segoe UI", sans-serif;
-  --font-accent: "Georgia", "Times New Roman", serif;
 
-  /* RADIOS Y SOMBRAS */
-  --radius-sm: 10px;
-  --radius-md: 14px;
-  --radius-lg: 18px;
+  /* SOMBRAS */
   --shadow-soft: 0 8px 22px rgba(17, 17, 17, 0.08);
   --shadow-card: 0 10px 24px rgba(27, 67, 50, 0.12);
-
 }
 
 /* ====================================
@@ -32,7 +28,7 @@ body {
   background: linear-gradient(
     180deg,
     var(--color-primary-medium) 0%,
-    #3c7c61 100%
+    var(--color-bg-gradient-end) 100%
   );
   color: var(--color-text-dark);
   line-height: 1.6;
@@ -60,97 +56,52 @@ th {
   font-family: var(--font-body);
 }
 
-.subtitle,
-.courses-content-header p,
-.estudiantes-content-header p,
-.matricula-content-header p,
-.dashboard-content-header p {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-style: normal;
-  color: var(--color-text-light);
-  font-size: 0.95rem;
-  letter-spacing: 0.15px;
-  opacity: 0.9;
-}
-
-.dashboard-content-header h1,
-.courses-content-header h1,
-.estudiantes-content-header h1,
-.matricula-content-header h1 {
-  font-family: "Avenir Next", "Segoe UI", sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  color: var(--color-text-light);
-  letter-spacing: 0.3px;
-}
-
-.dashboard-content-header h1::first-letter,
-.courses-content-header h1::first-letter,
-.estudiantes-content-header h1::first-letter,
-.matricula-content-header h1::first-letter {
-  color: var(--color-primary-light);
-  font-size: 1.3em;
-}
-
-/* LAYOUT PRINCIPAL */
-.dashboard,
-.courses,
-.estudiantes,
-.matricula {
+/* LAYOUT PRINCIPAL: sidebar a la izquierda + contenido */
+.layout {
   display: flex;
   min-height: 100vh;
 }
 
-/* HEADER/SIDEBAR COMPARTIDO */
-.dashboard-header,
-.courses-header,
-.estudiantes-header,
-.matricula-header {
+/* SIDEBAR / MENÚ LATERAL */
+.sidebar {
   width: 250px;
   background-color: var(--color-primary-dark);
   height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   border-right: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.dashboard-header h1,
-.courses-header h1,
-.estudiantes-header h1,
-.matricula-header h1 {
-  color: rgb(252, 251, 255);
+.sidebar-title {
+  color: var(--color-text-white);
   padding: 20px 20px 0 20px;
   font-size: 1.15rem;
   margin-bottom: 30px;
   font-weight: 700;
   letter-spacing: 0.3px;
+  line-height: 1.3;
   font-family: var(--font-title);
 }
 
-.dashboard-header h1,
-.courses-header h1,
-.estudiantes-header h1,
-.matricula-header h1,
-.dashboard-topbar h2,
-.courses-topbar h2,
-.estudiantes-topbar h2,
-.matricula-topbar h2 {
-  line-height: 1.3;
-}
-
-/* NAVEGACIÓN COMPARTIDA */
-.dashboard-nav,
-.courses-nav,
-.estudiantes-nav,
-.matricula-nav {
+/* NAVEGACIÓN DEL SIDEBAR */
+.sidebar-nav {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.dashboard-nav a,
-.courses-nav a,
-.estudiantes-nav a,
-.matricula-nav a {
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.sidebar-nav a {
   color: var(--color-text-white);
   text-decoration: none;
   display: inline-block;
@@ -162,51 +113,33 @@ th {
     background-color 0.2s ease;
 }
 
-.dashboard-nav a:hover,
-.courses-nav a:hover,
-.estudiantes-nav a:hover,
-.matricula-nav a:hover {
-  color: var(--color-primary-dark);
+.sidebar-nav a:hover {
+  color: var(--color-text-white);
   background-color: rgba(255, 255, 255, 0.12);
   transform: translateX(2px);
 }
 
-.dashboard-nav ul,
-.courses-nav ul,
-.estudiantes-nav ul,
-.matricula-nav ul {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  list-style: none;
-  margin-left: 20px;
-  margin-top: 20px;
+/* Página actual: aria-current="page" en el enlace del menú */
+.sidebar-nav a[aria-current="page"] {
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.16);
 }
 
-/* FOOTER SIDEBAR */
-.dashboard-footer-sydebar,
-.courses-footer-sydebar,
-.estudiantes-footer-sydebar,
-.matricula-footer-sydebar {
-  color: rgb(184, 183, 194);
+/* FOOTER DEL SIDEBAR */
+.sidebar-footer {
+  color: var(--color-text-soft);
   margin-top: auto;
   padding: 20px;
 }
 
-.dashboard-footer-sydebar p:last-child,
-.courses-footer-sydebar p:last-child,
-.estudiantes-footer-sydebar p:last-child,
-.matricula-footer-sydebar p:last-child {
+.sidebar-footer p:last-child {
   margin-top: 4px;
   font-size: 0.85rem;
   color: var(--color-text-muted);
 }
 
-/* MAIN CONTENT */
-.dashboard-main,
-.courses-main,
-.estudiantes-main,
-.matricula-main {
+/* CONTENIDO PRINCIPAL */
+.page-main {
   flex: 1;
   background-color: var(--color-primary-medium);
   min-height: 100vh;
@@ -214,32 +147,61 @@ th {
   flex-direction: column;
 }
 
-/* TOPBAR */
-.dashboard-topbar,
-.courses-topbar,
-.estudiantes-topbar,
-.matricula-topbar {
+/* BARRA SUPERIOR */
+.topbar {
   background-color: var(--color-bg-topbar);
   padding: 24px 30px;
   border-bottom: 1px solid var(--color-border-light);
   box-shadow: var(--shadow-soft);
 }
 
-.dashboard-topbar h2,
-.courses-topbar h2,
-.estudiantes-topbar h2,
-.matricula-topbar h2 {
+.topbar h2 {
   font-size: 1.55rem;
   color: var(--color-text-dark);
   font-weight: 700;
+  line-height: 1.3;
   font-family: var(--font-title);
 }
 
-/* FOOTER MAIN */
-.dashboard-footer-main,
-.courses-footer-main,
-.estudiantes-footer-main,
-.matricula-footer-main {
+/* CONTENIDO DE CADA PÁGINA (en móvil se reduce en los media queries) */
+.page-content {
+  flex: 1;
+  padding: 30px;
+}
+
+/* ENCABEZADO DE CADA PÁGINA (título + subtítulo + botón) */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.page-header h1 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-text-light);
+  letter-spacing: 0.3px;
+  margin-bottom: 10px;
+}
+
+.page-header h1::first-letter {
+  color: var(--color-primary-light);
+  font-size: 1.3em;
+}
+
+.page-header p {
+  font-family: var(--font-body);
+  font-style: normal;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  letter-spacing: 0.15px;
+  opacity: 0.9;
+}
+
+/* FOOTER DEL CONTENIDO */
+.page-footer {
   padding: 15px;
   color: var(--color-primary-dark);
   font-size: 13px;
@@ -275,17 +237,15 @@ th {
   box-shadow: 0 10px 20px rgba(27, 67, 50, 0.22);
 }
 
-/* INPUTS COMPARTIDOS */
-.buscar-curso,
-.buscar-estudiante,
-.buscar-matricula,
+/* BUSCADORES Y FILTROS */
+.buscador,
 .filtro-estado {
   padding: 12px 16px;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--color-border-input);
   border-radius: 12px;
   margin-bottom: 20px;
   font-size: 14px;
-  background-color: var(--color-bg-white);
+  background-color: var(--color-bg-surface);
   box-shadow: inset 0 1px 2px rgba(17, 17, 17, 0.03);
   transition:
     border-color 0.2s ease,
@@ -293,35 +253,31 @@ th {
     color 0.2s ease;
 }
 
-.buscar-curso:placeholder-shown,
-.buscar-estudiante:placeholder-shown,
-.buscar-matricula:placeholder-shown {
+.buscador {
+  width: 100%;
+}
+
+.buscador:placeholder-shown {
   color: var(--color-text-gray);
   font-style: italic;
 }
 
-.buscar-curso:hover,
-.buscar-estudiante:hover,
-.buscar-matricula:hover,
+.buscador:hover,
 .filtro-estado:hover {
   border-color: var(--color-focus-border);
 }
 
-.buscar-curso:focus,
-.buscar-estudiante:focus,
-.buscar-matricula:focus,
+.buscador:focus,
 .filtro-estado:focus {
   outline: none;
   border-color: var(--color-focus-border);
   box-shadow: 0 0 0 3px var(--color-focus-shadow);
 }
 
-/* TABLAS COMPARTIDAS */
-.tabla-courses,
-.tabla-estudiantes,
-.tabla-matricula {
+/* TABLAS */
+.tabla {
   width: 100%;
-  background-color: var(--color-bg-white);
+  background-color: var(--color-bg-surface);
   border-radius: 16px;
   overflow: hidden;
   border-collapse: separate;
@@ -329,20 +285,16 @@ th {
   box-shadow: var(--shadow-card);
 }
 
-.tabla-courses th,
-.tabla-estudiantes th,
-.tabla-matricula th {
+.tabla th {
   text-align: left;
   padding: 16px 20px;
-  background-color: var(--color-bg-white);
+  background-color: var(--color-bg-surface);
   border-bottom: 1px solid var(--color-border-light);
   font-size: 14px;
   font-weight: 600;
 }
 
-.tabla-courses td,
-.tabla-estudiantes td,
-.tabla-matricula td {
+.tabla td {
   padding: 16px 20px;
   border-bottom: 1px solid var(--color-border-table);
   font-size: 14px;
@@ -350,21 +302,15 @@ th {
   transition: background-color 0.2s ease;
 }
 
-.tabla-courses tbody tr:nth-child(odd) td,
-.tabla-estudiantes tbody tr:nth-child(odd) td,
-.tabla-matricula tbody tr:nth-child(odd) td {
+.tabla tbody tr:nth-child(odd) td {
   background-color: rgba(27, 67, 50, 0.08);
 }
 
-.tabla-courses tr:last-child td,
-.tabla-estudiantes tr:last-child td,
-.tabla-matricula tr:last-child td {
+.tabla tr:last-child td {
   border-bottom: none;
 }
 
-.tabla-courses tbody tr:hover td,
-.tabla-estudiantes tbody tr:hover td,
-.tabla-matricula tbody tr:hover td {
+.tabla tbody tr:hover td {
   background-color: rgba(255, 255, 255, 0.45);
 }
 
@@ -393,39 +339,26 @@ th {
 
 /* RESPONSIVE PARA PAGINAS PRINCIPALES */
 @media (max-width: 768px) {
-  .dashboard,
-  .courses,
-  .estudiantes,
-  .matricula {
+  .layout {
     display: block;
   }
 
-  .dashboard-header,
-  .courses-header,
-  .estudiantes-header,
-  .matricula-header {
+  .sidebar {
     width: 100%;
     height: auto;
+    position: static;
+    overflow-y: visible;
   }
 
-  .dashboard-header h1,
-  .courses-header h1,
-  .estudiantes-header h1,
-  .matricula-header h1 {
+  .sidebar-title {
     margin-bottom: 12px;
   }
 
-  .dashboard-nav,
-  .courses-nav,
-  .estudiantes-nav,
-  .matricula-nav {
+  .sidebar-nav {
     margin: 0;
   }
 
-  .dashboard-nav ul,
-  .courses-nav ul,
-  .estudiantes-nav ul,
-  .matricula-nav ul {
+  .sidebar-menu {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 6px;
@@ -433,58 +366,36 @@ th {
     padding: 0 20px 16px;
   }
 
-  .dashboard-nav a,
-  .courses-nav a,
-  .estudiantes-nav a,
-  .matricula-nav a {
+  .sidebar-nav a {
     padding: 8px 10px;
   }
 
-  .dashboard-footer-sydebar,
-  .courses-footer-sydebar,
-  .estudiantes-footer-sydebar,
-  .matricula-footer-sydebar {
+  .sidebar-footer {
     display: none;
   }
 
-  .dashboard-main,
-  .courses-main,
-  .estudiantes-main,
-  .matricula-main {
+  .page-main {
     min-height: auto;
   }
 
-  .dashboard-topbar,
-  .courses-topbar,
-  .estudiantes-topbar,
-  .matricula-topbar {
+  .topbar {
     padding: 18px 20px;
   }
 
-  .dashboard-topbar h2,
-  .courses-topbar h2,
-  .estudiantes-topbar h2,
-  .matricula-topbar h2 {
+  .topbar h2 {
     font-size: 1.25rem;
   }
 
-  .dashboard-content,
-  .courses-content,
-  .estudiantes-content,
-  .matricula-content {
+  .page-content {
     padding: 20px;
   }
 
-  .courses-content-header,
-  .estudiantes-content-header,
-  .matricula-content-header {
+  .page-header {
     flex-wrap: wrap;
     gap: 16px;
   }
 
-  .tabla-courses,
-  .tabla-estudiantes,
-  .tabla-matricula {
+  .tabla {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
@@ -492,18 +403,8 @@ th {
 }
 
 @media (max-width: 480px) {
-  .dashboard-content,
-  .courses-content,
-  .estudiantes-content,
-  .matricula-content {
+  .page-content {
     padding: 16px;
-  }
-
-  .dashboard-content-header h1,
-  .courses-content-header h1,
-  .estudiantes-content-header h1,
-  .matricula-content-header h1 {
-    font-size: 1.65rem;
   }
 
   .btn-nuevo {

@@ -18,8 +18,6 @@ Semana13_AlvaroVera/
 │   ├── colors.css
 │   ├── shared.css
 │   ├── dashboard.css
-│   ├── cursos.css
-│   ├── estudiantes.css
 │   ├── formulario_estudiante.css
 │   └── matricula.css
 └── img/
@@ -40,7 +38,22 @@ Semana13_AlvaroVera/
 - `colors.css` contiene todas las variables de color del proyecto.
 - `shared.css` contiene el reset, la estructura común, navegación, botones,
   controles, tablas y estilos responsive.
-- Cada archivo CSS restante contiene los estilos específicos de su página.
+- `dashboard.css`, `matricula.css` y `formulario_estudiante.css` contienen solo
+  lo específico de su página. Cursos y Estudiantes no necesitan CSS propio.
+
+Las 4 páginas principales usan las mismas clases de estructura:
+
+| Clase            | Elemento                                  |
+| ---------------- | ----------------------------------------- |
+| `.layout`        | `<body>`: sidebar + contenido             |
+| `.sidebar`       | menú lateral (`.sidebar-title`, `.sidebar-nav`, `.sidebar-menu`, `.sidebar-footer`) |
+| `.page-main`     | columna de contenido                      |
+| `.topbar`        | barra superior                            |
+| `.page-content`  | sección con el contenido de la página     |
+| `.page-header`   | título, subtítulo y botón de la página    |
+| `.page-footer`   | footer inferior                           |
+| `.buscador`      | campo de búsqueda                         |
+| `.tabla`         | tablas de datos                           |
 
 Las páginas principales incluyen los estilos con rutas relativas:
 

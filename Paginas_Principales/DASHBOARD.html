@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DASHBOARD</title>
-    <link rel="stylesheet" href="../css/shared.css" />
     <link rel="stylesheet" href="../css/colors.css" />
+    <link rel="stylesheet" href="../css/shared.css" />
     <link rel="stylesheet" href="../css/dashboard.css" />
   </head>
 
@@ -13,78 +13,78 @@
        PÁGINA: DASHBOARD
        Descripción: resumen general del sistema.
        ====================================== -->
-  <body class="dashboard">
+  <body class="layout">
     <!-- SIDEBAR / MENÚ LATERAL -->
-    <header class="dashboard-header">
-      <h1>Sistema de Gestión de Recursos</h1>
-      <nav class="dashboard-nav">
-        <ul class="dashboard-menu">
-          <li><a href="DASHBOARD.html" target="_self">Inicio</a></li>
+    <aside class="sidebar">
+      <p class="sidebar-title">Sistema de Gestión de Cursos</p>
+      <nav class="sidebar-nav">
+        <ul class="sidebar-menu">
+          <li><a href="DASHBOARD.html" target="_self" aria-current="page">Inicio</a></li>
           <li><a href="CURSOS.html" target="_self">Cursos</a></li>
           <li><a href="ESTUDIANTES.html" target="_self">Estudiantes</a></li>
           <li><a href="MATRICULA.html" target="_self">Matrícula</a></li>
         </ul>
       </nav>
 
-      <footer class="dashboard-footer-sydebar">
+      <footer class="sidebar-footer">
         <p>Alvaro Vera</p>
         <p>alvera@cesde.net</p>
       </footer>
-    </header>
+    </aside>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main class="dashboard-main">
+    <main class="page-main">
       <!-- BARRA SUPERIOR -->
-      <header class="dashboard-topbar">
+      <header class="topbar">
         <h2>Sistema de Gestión de Cursos</h2>
       </header>
 
       <!-- SECCIÓN DE CONTENIDO DEL DASHBOARD -->
-      <section class="dashboard-content">
+      <section class="page-content">
         <!-- ENCABEZADO DE LA PÁGINA -->
-        <header class="dashboard-content-header">
+        <header class="page-header">
           <hgroup>
             <h1>Dashboard</h1>
             <p>Resumen general del sistema</p>
           </hgroup>
         </header>
+
+        <!-- AQUÍ IRÁN LAS TARJETAS DEL DASHBOARD -->
+        <div class="dashboard-cards">
+          <div class="card">
+            <h2 class="color1">Estudiantes</h2>
+            <p>3</p>
+          </div>
+          <div class="card">
+            <h2 class="color2">Cursos</h2>
+            <p>2</p>
+          </div>
+          <div class="card">
+            <h2 class="color3">Matrículas</h2>
+            <p>4</p>
+          </div>
+        </div>
+
+        <section
+          class="dashboard-images"
+          aria-label="Recursos visuales del sistema"
+        >
+          <figure class="dashboard-image-card">
+            <img
+              src="../img/matriculas_estado.png"
+              alt="Gráfico de matrículas por estado: 2 activas (50%), 1 completada (25%) y 1 cancelada (25%)"
+            />
+          </figure>
+          <figure class="dashboard-image-card">
+            <img
+              src="../img/cursos_populares.png"
+              alt="Cursos populares: React Desde Cero con 2 matrículas y Spring Boot con 2 matrículas"
+            />
+          </figure>
+        </section>
       </section>
 
-      <!-- AQUÍ IRÁN LAS TARJETAS DEL DASHBOARD -->
-      <div class="dashboard-cards">
-        <div class="card">
-          <h2 class="color1">Estudiantes</h2>
-          <p>3</p>
-        </div>
-        <div class="card">
-          <h2 class="color2">Cursos</h2>
-          <p>2</p>
-        </div>
-        <div class="card">
-          <h2 class="color3">Matrículas</h2>
-          <p>4</p>
-        </div>
-      </div>
-
-      <section
-        class="dashboard-images"
-        aria-label="Recursos visuales del sistema"
-      >
-        <figure class="dashboard-image-card">
-          <img
-            src="../img/matriculas_estado.png"
-            alt="Estudiantes reunidos trabajando en equipo"
-          />
-        </figure>
-        <figure class="dashboard-image-card">
-          <img
-            src="../img/cursos_populares.png"
-            alt="Libros y materiales de estudio sobre una mesa"
-          />
-        </figure>
-      </section>
-
-      <footer class="dashboard-footer-main">
+      <footer class="page-footer">
         <p>©2026 Sistema de Gestión de Cursos</p>
       </footer>
     </main>
