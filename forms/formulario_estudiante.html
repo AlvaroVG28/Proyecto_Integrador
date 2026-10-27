@@ -52,9 +52,12 @@
               id="telefono"
               type="tel"
               name="telefono"
-              placeholder="Teléfono…"
+              placeholder="Ej: 3001234567"
               autocomplete="tel"
-              inputmode="tel"
+              inputmode="numeric"
+              pattern="[0-9]{10}"
+              maxlength="10"
+              title="Ingresa 10 dígitos, sin espacios ni guiones"
               required
             />
           </div>

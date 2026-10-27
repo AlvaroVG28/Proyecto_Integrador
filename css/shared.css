@@ -155,10 +155,11 @@ th {
   box-shadow: var(--shadow-soft);
 }
 
-.topbar h2 {
+.topbar-title {
   font-size: 1.55rem;
   color: var(--color-text-dark);
   font-weight: 700;
+  letter-spacing: 0.2px;
   line-height: 1.3;
   font-family: var(--font-title);
 }
@@ -382,7 +383,7 @@ th {
     padding: 18px 20px;
   }
 
-  .topbar h2 {
+  .topbar-title {
     font-size: 1.25rem;
   }
 
