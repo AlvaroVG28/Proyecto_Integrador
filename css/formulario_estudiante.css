@@ -40,6 +40,7 @@ body {
     var(--color-card-bg-bottom)
   );
   box-shadow: 0 16px 32px rgba(27, 67, 50, 0.14);
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .title-form {
@@ -49,11 +50,6 @@ body {
   text-align: center;
 }
 
-.title-form::first-letter {
-  color: var(--color-button-main);
-  font-size: 1.3em;
-}
-
 .inputs label {
   display: block;
   margin-bottom: 7px;
@@ -61,6 +57,12 @@ body {
   font-size: 0.82rem;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+/* ::after - asterisco rojo en las etiquetas (todos los campos son obligatorios) */
+.inputs label::after {
+  content: " *";
+  color: var(--color-delete);
 }
 
 .field {
@@ -102,12 +104,20 @@ body {
   box-shadow: 0 0 0 3px var(--color-focus-shadow);
 }
 
-/* Nombre, apellido, correo y teléfono: tienen required; el correo también exige formato.
-   Se usa :user-invalid (y no :invalid) para marcar el error solo después de que
-   el usuario interactúa con el campo, no apenas carga la página. */
+/* Nombre, apellido, correo y teléfono: tienen required; el correo y el teléfono
+   también exigen formato. */
 .inputs input:valid {
   border-color: var(--color-button-main);
 }
+
+/* :invalid junto con :not(:placeholder-shown): marca en rojo solo cuando el usuario
+   ya escribió algo que no es válido. Así el formulario no aparece en rojo al cargar. */
+.inputs input:invalid:not(:placeholder-shown) {
+  border-color: var(--color-delete);
+}
+
+/* :user-invalid: marca el error después de interactuar (por ejemplo, al pulsar
+   "Crear" con campos vacíos) */
 
 .inputs input:user-invalid {
   border-color: var(--color-delete);
@@ -203,10 +213,3 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .inputs input,
-  .form-group.btns button,
-  .form-group.btns a {
-    transition: none;
-  }
-}

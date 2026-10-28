@@ -40,7 +40,9 @@
 
   /* COLORES DE ACCIONES */
   --color-edit: #2563eb; /* Azul - Editar */
+  --color-edit-hover: #1d4ed8; /* Azul oscuro - Hover Editar */
   --color-delete: #dc2626; /* Rojo - Eliminar y Cancelar [FORMULARIO] */
+  --color-delete-hover: #b91c1c; /* Rojo oscuro - Hover Eliminar */
 
   /* COLORES DE FONDO */
   --color-bg-surface: #c9d1d7; /* Gris azulado - inputs y tablas [FORMULARIO] */

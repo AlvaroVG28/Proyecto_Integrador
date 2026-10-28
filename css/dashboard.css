@@ -25,6 +25,7 @@
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .card:hover {
@@ -57,6 +58,7 @@
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+  animation: fadeIn 1s ease-in;
 }
 
 .dashboard-image-card:hover {
@@ -65,11 +67,17 @@
 }
 
 .dashboard-image-card img {
+  transition: opacity 0.3s ease;
   display: block;
   width: 100%;
   max-width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+/* al pasar el mouse la imagen se atenúa un poco (transition de opacity) */
+.dashboard-image-card:hover img {
+  opacity: 0.85;
 }
 
 /* COLORES DE TARJETAS */

@@ -1,0 +1,96 @@
+/* ====================================
+   ANIMACIONES (@keyframes) DEL PROYECTO
+   Se cargan en las 5 páginas. Cada archivo CSS
+   las aplica con la propiedad "animation".
+   ==================================== */
+
+/* fadeInUp: aparece y sube 30px
+   Uso: tarjetas del Dashboard, tablas y formulario */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* slideDown: aparece y baja desde 30px más arriba
+   Uso: barra superior */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* fadeIn: solo cambia la opacidad, sin movimiento
+   Uso: imágenes de los gráficos del Dashboard */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* desvanecer: alerta temporal en 3 fases
+   (1) entra desde arriba, (2) se mantiene visible,
+   (3) se desvanece por completo y regresa hacia arriba.
+   visibility: hidden al final para que no tape ni bloquee clics.
+   Uso: alerta "Estudiante creado" (con :target) */
+@keyframes desvanecer {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+    visibility: hidden;
+  }
+}
+
+/* ocultar: igual que desvanecer pero sin movimiento.
+   Uso: la alerta, cuando el usuario pidió reducir el movimiento */
+@keyframes ocultar {
+  0%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Quien tiene activada la opción "reducir movimiento" en su sistema
+   ve todo directamente, sin animaciones ni transiciones */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* la alerta igual debe irse sola, así que solo se le quita el movimiento */
+  .alerta:target {
+    animation: ocultar 3s ease forwards !important;
+  }
+}

@@ -17,6 +17,7 @@ Semana13_AlvaroVera/
 ├── css/
 │   ├── colors.css
 │   ├── shared.css
+│   ├── animaciones.css
 │   ├── dashboard.css
 │   ├── formulario_estudiante.css
 │   └── matricula.css
@@ -38,6 +39,9 @@ Semana13_AlvaroVera/
 - `colors.css` contiene todas las variables de color del proyecto.
 - `shared.css` contiene el reset, la estructura común, navegación, botones,
   controles, tablas y estilos responsive.
+- `animaciones.css` contiene las animaciones `@keyframes` (`fadeInUp`, `slideDown`,
+  `fadeIn`, `desvanecer`) y las desactiva si el usuario pidió reducir el movimiento.
+  Lo cargan las 5 páginas.
 - `dashboard.css`, `matricula.css` y `formulario_estudiante.css` contienen solo
   lo específico de su página. Cursos y Estudiantes no necesitan CSS propio.
 

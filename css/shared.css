@@ -86,6 +86,12 @@ th {
   font-family: var(--font-title);
 }
 
+/* ::first-letter - la "S" de "Sistema de Gestión de Cursos" resaltada */
+.sidebar-title::first-letter {
+  color: var(--color-primary-light);
+  font-size: 1.3em;
+}
+
 /* NAVEGACIÓN DEL SIDEBAR */
 .sidebar-nav {
   margin-top: 20px;
@@ -102,6 +108,7 @@ th {
 }
 
 .sidebar-nav a {
+  position: relative;
   color: var(--color-text-white);
   text-decoration: none;
   display: inline-block;
@@ -123,6 +130,35 @@ th {
 .sidebar-nav a[aria-current="page"] {
   font-weight: 600;
   background-color: rgba(255, 255, 255, 0.16);
+}
+
+/* ::before - punto antes del texto de la página actual */
+.sidebar-nav a[aria-current="page"]::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  vertical-align: middle;
+}
+
+/* ::after - línea bajo el enlace que crece al pasar el mouse (transition de width) */
+.sidebar-nav a::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  bottom: 4px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--color-primary-light);
+  transition: width 0.3s ease;
+}
+
+.sidebar-nav a:hover::after {
+  width: calc(100% - 24px);
 }
 
 /* FOOTER DEL SIDEBAR */
@@ -153,6 +189,7 @@ th {
   padding: 24px 30px;
   border-bottom: 1px solid var(--color-border-light);
   box-shadow: var(--shadow-soft);
+  animation: slideDown 0.6s ease-out;
 }
 
 .topbar-title {
@@ -185,11 +222,6 @@ th {
   color: var(--color-text-light);
   letter-spacing: 0.3px;
   margin-bottom: 10px;
-}
-
-.page-header h1::first-letter {
-  color: var(--color-primary-light);
-  font-size: 1.3em;
 }
 
 .page-header p {
@@ -284,6 +316,7 @@ th {
   border-collapse: separate;
   border-spacing: 0;
   box-shadow: var(--shadow-card);
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .tabla th {
@@ -320,6 +353,7 @@ th {
   text-decoration: none;
   font-size: 14px;
   margin-right: 12px;
+  transition: all 0.3s ease;
 }
 
 .accion-editar {
@@ -327,6 +361,7 @@ th {
 }
 
 .accion-editar:hover {
+  color: var(--color-edit-hover);
   text-decoration: underline;
 }
 
@@ -335,7 +370,28 @@ th {
 }
 
 .accion-eliminar:hover {
+  color: var(--color-delete-hover);
   text-decoration: underline;
+}
+
+/* ALERTAS: ocultas hasta que la URL apunta a su id (:target) */
+.alerta {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-white);
+  font-weight: 600;
+  box-shadow: var(--shadow-card);
+}
+
+.alerta:target {
+  display: block;
+  animation: desvanecer 3s ease forwards;
 }
 
 /* RESPONSIVE PARA PAGINAS PRINCIPALES */
@@ -369,6 +425,14 @@ th {
 
   .sidebar-nav a {
     padding: 8px 10px;
+  }
+
+  .sidebar-nav a::after {
+    left: 10px;
+  }
+
+  .sidebar-nav a:hover::after {
+    width: calc(100% - 20px);
   }
 
   .sidebar-footer {
@@ -411,5 +475,10 @@ th {
   .btn-nuevo {
     width: 100%;
     justify-content: center;
+  }
+
+  .alerta {
+    left: 16px;
+    right: 16px;
   }
 }
